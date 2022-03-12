@@ -19,4 +19,15 @@ public class Operations {
         linkedList.display();
 
     }
+    public static void insertInMiddle() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.append(56);
+        linkedList.append(70);
+        System.out.println("Before");
+        linkedList.display();
+        linkedList.insertInMiddle(30);
+        System.out.println("After");
+        linkedList.display();
+
+    }
 }

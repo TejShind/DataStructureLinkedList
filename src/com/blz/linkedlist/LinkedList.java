@@ -4,7 +4,7 @@ public class LinkedList {
     Node head;
     Node tail;
 
-//Compute to Add data
+//Compute to Add data from Start.
     public void push(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -16,7 +16,7 @@ public class LinkedList {
             newNode.next = temp;
         }
     }
-
+//Printing Purpose.
     public void display() {
         Node temp = head;
         if (head == null) {
@@ -32,7 +32,7 @@ public class LinkedList {
             }
         }
     }
-
+//Adding data from end.
         public Node append(int data) {
             Node newNode = new Node(data);
             if (head != null && tail != null) {
@@ -43,4 +43,29 @@ public class LinkedList {
             this.tail = newNode;
             return newNode;
         }
+// Add data in between two Nodes.
+    public void insertInMiddle(int data) {
+        Node newNode = new Node(data);
+        int length = size();
+        int mid = length % 2 == 0 ? length / 2 : (length + 1) / 2;//by usingTrinity operator
+        Node prevNode = head;
+        Node nextNode = head;
+        for (int i = 0; i < mid; i++) {
+            prevNode = nextNode;  // 56
+            nextNode = nextNode.next;  //70
+        }
+        prevNode.next = newNode;   // 56 -> 30
+        newNode.next = nextNode;  // 30 - > 70
     }
+    // Count length of Linked list.
+    public int size() {
+        int length = 0;
+        Node temp = head;
+        while (temp != null) {
+            length++;
+            temp = temp.next;
+        }
+        return length;
+    }
+
+}
