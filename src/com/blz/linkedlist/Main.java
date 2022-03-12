@@ -10,7 +10,8 @@ public class Main {
         System.out.println("Welcome To the Data structure program using Linked List");
         System.out.println(" Enter 1 to Add data from start ");
         System.out.println(" Enter 2 to Add data from last ");
-        System.out.println(" Enter 3  to Add data in between two nodes ");
+        System.out.println(" Enter 3 to Add data in between two nodes ");
+        System.out.println(" Enter 4 Delete data from start ");
 
         switch (sc.nextInt()) {
 
@@ -23,6 +24,10 @@ public class Main {
             case 3 :
                 Operations.insertInMiddle();
                 break;
+            case 4 :
+                operations.deleteNodeFromStart();
+                break;
+
             }
         }
     }

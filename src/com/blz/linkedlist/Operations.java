@@ -2,7 +2,7 @@ package com.blz.linkedlist;
 
 public class Operations {
 
-    public void addElementInStart() {
+    public LinkedList addElementInStart() {
 
         LinkedList linkedList = new LinkedList();
         linkedList.push(70);
@@ -10,6 +10,7 @@ public class Operations {
         linkedList.push(56);
         linkedList.display();
 
+        return linkedList;
     }
     public void addElementInEnd() {
         LinkedList linkedList = new LinkedList();
@@ -29,5 +30,12 @@ public class Operations {
         System.out.println("After");
         linkedList.display();
 
+    }
+
+    public void deleteNodeFromStart() {
+        LinkedList linkedList = addElementInStart();
+        System.out.println();
+        linkedList.pop();
+        linkedList.display();
     }
 }

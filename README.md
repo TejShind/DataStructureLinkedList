@@ -4,4 +4,4 @@
 3) Ability to create Linked list by adding.
 4) Ability to create Linked list by appending.
 5) Insert data in between two Nodes.
-6) 
+6) Delete first element from Linked List.

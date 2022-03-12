@@ -67,5 +67,10 @@ public class LinkedList {
         }
         return length;
     }
-
+//Delete data from start.
+    public Node pop() {
+        Node tempNode = this.head;
+        this.head = this.head.next;
+        return tempNode;
+    }
 }
