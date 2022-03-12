@@ -11,4 +11,12 @@ public class Operations {
         linkedList.display();
 
     }
+    public void addElementInEnd() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.append(56);
+        linkedList.append(30);
+        linkedList.append(70);
+        linkedList.display();
+
+    }
 }

@@ -32,4 +32,15 @@ public class LinkedList {
             }
         }
     }
-}
+
+        public Node append(int data) {
+            Node newNode = new Node(data);
+            if (head != null && tail != null) {
+                tail.next = newNode;
+            } else {
+                this.head = newNode;
+            }
+            this.tail = newNode;
+            return newNode;
+        }
+    }
