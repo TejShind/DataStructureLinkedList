@@ -7,3 +7,4 @@
 6) Delete first element from Linked List.
 7) Search Linked List to find specific node.
 8) Inserting node after given node.
+9) Delete the specific node from Linked List.

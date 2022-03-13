@@ -50,7 +50,7 @@ public class LinkedList {
     public void insertInMiddle(int data) {
         Node newNode = new Node(data);
         int length = size();
-        int mid = length % 2 == 0 ? length / 2 : (length + 1) / 2;//by usingTrinity operator
+        int mid = length % 2 == 0 ? length / 2 : (length + 1) / 2;//by using Turnery operator
         Node prevNode = head;
         Node nextNode = head;
         for (int i = 0; i < mid; i++) {
@@ -119,5 +119,23 @@ public class LinkedList {
         Node temp = node.next;
         node.next = newNode;
         newNode.next = temp;
+    }
+    //Deleting a given node from the list
+
+    public void DeletingGivenNode(int deletingNode) {
+        if (head == null) {
+            System.out.println("Empty linked list");
+        } else {
+            Node temp = head;
+            Node prev = head;
+            while (temp != null) {
+                if (temp.data == deletingNode) {
+                    break;
+                }
+                prev = temp;
+                temp = temp.next;
+            }
+            prev.next = temp.next;
+        }
     }
 }

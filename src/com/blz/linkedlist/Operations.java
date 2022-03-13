@@ -6,10 +6,10 @@ public class Operations {
 
         LinkedList linkedList = new LinkedList();
         linkedList.push(70);
+        linkedList.push(40);
         linkedList.push(30);
         linkedList.push(56);
         linkedList.display();
-
         return linkedList;
     }
     public void addElementInEnd() {
@@ -46,13 +46,14 @@ public class Operations {
         linkedList.display();
     }
 
-    public void searchNode() {
+    public LinkedList searchNode() {
         LinkedList linkedList = addElementInStart();
         System.out.println();
-        linkedList.search(30);
+        linkedList.search(40);
+        return linkedList;
     }
 
-    public void insertInBetween() {
+    public LinkedList insertInBetween() {
         LinkedList linkedList = new LinkedList();
         Node first = linkedList.append(56);
         Node second = linkedList.append(30);
@@ -64,5 +65,14 @@ public class Operations {
         linkedList.insertInBetween(second, newNode);
         System.out.println("After");
         linkedList.display();
+        return linkedList;
+    }
+
+    public LinkedList deleteSpecificNode() {
+        LinkedList linkedList = addElementInStart();
+        linkedList.search(40);
+        linkedList.DeletingGivenNode(40);
+        linkedList.display();
+        return linkedList;
     }
 }

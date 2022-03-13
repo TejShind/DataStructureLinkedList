@@ -15,7 +15,7 @@ public class Main {
         System.out.println(" Enter 5 to Delete data from end ");
         System.out.println(" Enter 6 to Search specific node from Linked List");
         System.out.println(" Enter 7 to Inserting node after defined node");
-
+        System.out.println(" Enter 8 to Delete specific node from Linked List");
 
         switch (sc.nextInt()) {
 
@@ -40,6 +40,10 @@ public class Main {
             case 7:
                 operations.insertInBetween();
                 break;
+            case 8:
+                operations.deleteSpecificNode();
+                break;
+
             default:
 
         }
