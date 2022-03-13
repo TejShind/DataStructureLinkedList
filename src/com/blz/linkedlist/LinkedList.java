@@ -83,4 +83,29 @@ public Node pop() {
         this.tail = tempNode;
         tempNode.next = null;
     }
+
+    //Searches the specified node with value.
+    public void search(int value) {
+        Node tempNode = head;
+        int count = 1;
+        boolean flag = false;
+        if (head == null) {
+            System.out.println("Linked List is empty");
+            return;
+        } else {
+            while (tempNode != null) {
+                if (tempNode.data == value) {
+                    flag = true;
+                    break;
+                }
+                count++;
+                tempNode = tempNode.next;
+            }
+        }
+        if (flag) {
+            System.out.println("Element is present at " + count + " position");
+        } else {
+            System.out.println("Element is not present in linked list");
+        }
+    }
 }

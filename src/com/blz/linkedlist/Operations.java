@@ -45,4 +45,10 @@ public class Operations {
         linkedList.poplast();
         linkedList.display();
     }
+
+    public void searchNode() {
+        LinkedList linkedList = addElementInStart();
+        System.out.println();
+        linkedList.search(30);
+    }
 }

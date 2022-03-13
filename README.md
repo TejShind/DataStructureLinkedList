@@ -5,3 +5,4 @@
 4) Ability to create Linked list by appending.
 5) Insert data in between two Nodes.
 6) Delete first element from Linked List.
+7) Search Linked List to find specific node.
