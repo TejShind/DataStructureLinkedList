@@ -6,3 +6,4 @@
 5) Insert data in between two Nodes.
 6) Delete first element from Linked List.
 7) Search Linked List to find specific node.
+8) Inserting node after given node.

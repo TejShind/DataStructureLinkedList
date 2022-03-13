@@ -51,4 +51,18 @@ public class Operations {
         System.out.println();
         linkedList.search(30);
     }
+
+    public void insertInBetween() {
+        LinkedList linkedList = new LinkedList();
+        Node first = linkedList.append(56);
+        Node second = linkedList.append(30);
+        Node third = linkedList.append(70);
+        Node newNode = new Node(40);
+        System.out.println("Before");
+        linkedList.display();
+        System.out.println();
+        linkedList.insertInBetween(second, newNode);
+        System.out.println("After");
+        linkedList.display();
+    }
 }

@@ -13,7 +13,8 @@ public class Main {
         System.out.println(" Enter 3 to Add data in between two nodes ");
         System.out.println(" Enter 4 to Delete data from start ");
         System.out.println(" Enter 5 to Delete data from end ");
-        System.out.println(" Enter 6 to Search Linked list to find specific node");
+        System.out.println(" Enter 6 to Search specific node from Linked List");
+        System.out.println(" Enter 7 to Inserting node after defined node");
 
 
         switch (sc.nextInt()) {
@@ -36,8 +37,11 @@ public class Main {
             case 6:
                 operations.searchNode();
                 break;
+            case 7:
+                operations.insertInBetween();
+                break;
             default:
 
         }
-        }
     }
+}

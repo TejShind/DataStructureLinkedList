@@ -4,7 +4,7 @@ public class LinkedList {
     Node head;
     Node tail;
 
-//Compute to Add data from Start.
+    //Compute to Add data from Start.
     public void push(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -16,7 +16,8 @@ public class LinkedList {
             newNode.next = temp;
         }
     }
-//Printing Purpose.
+
+    //Printing Purpose.
     public void display() {
         Node temp = head;
         if (head == null) {
@@ -32,18 +33,20 @@ public class LinkedList {
             }
         }
     }
-//Adding data from end.
-        public Node append(int data) {
-            Node newNode = new Node(data);
-            if (head != null && tail != null) {
-                tail.next = newNode;
-            } else {
-                this.head = newNode;
-            }
-            this.tail = newNode;
-            return newNode;
+
+    //Adding data from end.
+    public Node append(int data) {
+        Node newNode = new Node(data);
+        if (head != null && tail != null) {
+            tail.next = newNode;
+        } else {
+            this.head = newNode;
         }
-// Add data in between two Nodes.
+        this.tail = newNode;
+        return newNode;
+    }
+
+    // Add data in between two Nodes.
     public void insertInMiddle(int data) {
         Node newNode = new Node(data);
         int length = size();
@@ -57,6 +60,7 @@ public class LinkedList {
         prevNode.next = newNode;   // 56 -> 30
         newNode.next = nextNode;  // 30 - > 70
     }
+
     // Count length of Linked list.
     public int size() {
         int length = 0;
@@ -67,12 +71,13 @@ public class LinkedList {
         }
         return length;
     }
-//Delete data from start.
-public Node pop() {
-    Node tempNode = this.head;
-    this.head = this.head.next;
-    return tempNode;
-}
+
+    //Delete data from start.
+    public Node pop() {
+        Node tempNode = this.head;
+        this.head = this.head.next;
+        return tempNode;
+    }
 
     //Delete data from End.
     public void poplast() {
@@ -107,5 +112,12 @@ public Node pop() {
         } else {
             System.out.println("Element is not present in linked list");
         }
+    }
+//Inserting node after given node.
+
+    public void insertInBetween(Node node, Node newNode) {
+        Node temp = node.next;
+        node.next = newNode;
+        newNode.next = temp;
     }
 }
