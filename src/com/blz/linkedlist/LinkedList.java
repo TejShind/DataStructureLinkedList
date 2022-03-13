@@ -68,9 +68,19 @@ public class LinkedList {
         return length;
     }
 //Delete data from start.
-    public Node pop() {
-        Node tempNode = this.head;
-        this.head = this.head.next;
-        return tempNode;
+public Node pop() {
+    Node tempNode = this.head;
+    this.head = this.head.next;
+    return tempNode;
+}
+
+    //Delete data from End.
+    public void poplast() {
+        Node tempNode = head;
+        while (!tempNode.next.equals(this.tail)) {
+            tempNode = tempNode.next;
+        }
+        this.tail = tempNode;
+        tempNode.next = null;
     }
 }

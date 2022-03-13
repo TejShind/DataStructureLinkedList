@@ -38,4 +38,11 @@ public class Operations {
         linkedList.pop();
         linkedList.display();
     }
+
+    public void deleteNodeFromEnd() {
+        LinkedList linkedList = addElementInStart();
+        System.out.println();
+        linkedList.poplast();
+        linkedList.display();
+    }
 }

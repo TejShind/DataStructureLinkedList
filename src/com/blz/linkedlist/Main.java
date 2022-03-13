@@ -11,7 +11,8 @@ public class Main {
         System.out.println(" Enter 1 to Add data from start ");
         System.out.println(" Enter 2 to Add data from last ");
         System.out.println(" Enter 3 to Add data in between two nodes ");
-        System.out.println(" Enter 4 Delete data from start ");
+        System.out.println(" Enter 4 to Delete data from start ");
+        System.out.println(" Enter 5 to Delete data from end ");
 
         switch (sc.nextInt()) {
 
@@ -21,13 +22,17 @@ public class Main {
             case 2:
                 operations.addElementInEnd();
                 break;
-            case 3 :
+            case 3:
                 Operations.insertInMiddle();
                 break;
-            case 4 :
+            case 4:
                 operations.deleteNodeFromStart();
                 break;
+            case 5:
+                operations.deleteNodeFromEnd();
+                break;
 
-            }
+
+        }
         }
     }
